@@ -1,5 +1,5 @@
 name: cordova
-version: 0.0.1
+version: 0.0.2
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type: service
 platform: ubuntu@12.04
@@ -28,3 +28,8 @@ script: |
   rm -rf nodeinstall
   node --version
   npm --version
+
+  add-apt-repository ppa:webupd8team/java
+  apt-get update
+  apt-get install oracle-java8-installer
+  java -version
