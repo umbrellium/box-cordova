@@ -26,12 +26,19 @@ script: |
   sudo make install
   cd $HOME
   rm -rf nodeinstall
-  node --version
-  npm --version
 
   sudo add-apt-repository -y ppa:webupd8team/java
   sudo apt-get update -y
   echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
   echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
   sudo apt-get install -y oracle-java8-installer
+
+  sudo npm install -g grunt-cli
+  sudo npm install -g cordova
+
+  node --version
+  npm --version
   java -version
+  grunt --version
+  cordova --version
+
