@@ -38,6 +38,7 @@ script: |
 
   sudo npm install -g grunt-cli
   sudo npm install -g cordova
+  sudo npm install -g bower
 
   source $WERCKER_SOURCE_DIR/install-sdk.sh
 
@@ -49,6 +50,7 @@ script: |
   ant -version
   grunt --version
   cordova --version
+  bower --version
 
   echo "Complete"
   cat $profile
