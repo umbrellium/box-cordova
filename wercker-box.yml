@@ -1,7 +1,7 @@
 name: cordova
-version: 0.0.5
+version: 0.0.6
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
-type: service
+type: main
 platform: ubuntu@12.04
 description: wercker box for building, testing and deploying cordova apps for android
 keywords:
@@ -53,4 +53,3 @@ script: |
   echo "Complete"
   cat $profile
   cd $HOME
-  du -h
