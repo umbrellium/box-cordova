@@ -10,24 +10,39 @@ keywords:
   - phonegap
   - testflight
 package:
-  - cordova@3.5.1
-  - nodejs@0.10.30
+  - cordova@3.5.0
+  - nodejs@0.10.31
+  - grunt-cli@0.1.13
 script: |
+  # Add repositories
   sudo add-apt-repository -y ppa:chris-lea/node.js
   sudo add-apt-repository -y ppa:webupd8team/java
   sudo apt-get update -y
 
+  # Install nodejs
   sudo apt-get install -y nodejs
 
+  # Install java
   echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
   echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-  sudo apt-get install -y oracle-java8-installer
+  sudo apt-get install -y oracle-java8-installer -qq
+
+  # Install ant
+  sudo apt-get install ant ant-contrib -y
 
   sudo npm install -g grunt-cli
   sudo npm install -g cordova
 
+  #cd /opt
+  #mkdir androidsdkinstall
+  #cd androidsdkinstall
+  #curl -O http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+
+  echo "Versions"
+
   node --version
   npm --version
   java -version
+  ant -version
   grunt --version
   cordova --version
