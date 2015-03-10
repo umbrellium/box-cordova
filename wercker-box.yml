@@ -1,5 +1,5 @@
 name: cordova
-version: 0.0.9
+version: 0.0.10
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type: main
 platform: ubuntu@12.04
@@ -9,8 +9,8 @@ keywords:
   - android
   - phonegap
 package:
-  - cordova@3.5.0
-  - nodejs@0.10.31
+  - cordova@4.3.0
+  - nodejs@0.12.0
   - grunt-cli@0.1.13
   - android@23.0.2
 script: |
